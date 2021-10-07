@@ -1,27 +1,27 @@
 import { Request, Response } from "express";
 import { connection } from "../data/connection";
-import { Student } from "../types";
+import { Professor } from "../types";
 
-export default async function createStudent(
+export default async function createProfessor(
    req: Request,
    res: Response
 ): Promise<void> {
    try {
 
-      const { name, birthDate, email, hobbies } = req.body
+      const { name, birthDate, email, skills } = req.body
 
-      if (!name || !birthDate || !email || !hobbies) {
+      if (!name || !birthDate || !email || !skills) {
          res.statusCode = 422
          throw "'name', 'birthDate', 'email' e 'hobbies' são obrigatórios"
       }
 
       const id: string = Date.now().toString()
 
-      const newStudent: Student = { id, name, birthDate, email, hobbies, }
+      const newProfessor: Professor = { id, name, birthDate, email, skills }
 
-      await connection('Students').insert(newStudent)
+      await connection('Professors').insert(newProfessor)
 
-      res.status(201).send("Usuário criado!")
+      res.status(201).send("Professor adicionado com sucesso!")
 
    } catch (error: any) {
 
