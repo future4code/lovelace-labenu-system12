@@ -1,0 +1,16 @@
+[
+   {
+      "id" :1,
+      "name":  "Joao Correia",
+      "email": "lsd.omg1943@gmail.com",
+      "birthDate": "1992-12-13",
+      "hobbies":  "video game, futebol"
+   },
+   {
+      "id" :2,
+      "name":  "Victor Nogueira",
+      "email": "victor@gmail.com",
+      "birthDate": "1993-10-04",
+      "hobbies":  "surf, futebol"
+   }
+]
