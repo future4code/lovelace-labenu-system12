@@ -11,11 +11,12 @@ const createTables = () => connection
          name VARCHAR(255) NOT NULL,
          startingDate DATE NOT NULL,
          endingDate DATE NOT NULL,
-         actualModule INT(1) NOT NULL,
-         professor_id VARCHAR(255) NOT NULL,
-         student_id VARCHAR(255) NOT NULL,
-         FOREIGN KEY (professor_id) REFERENCES Professors (id),
-         FOREIGN KEY (student_id) REFERENCES Students (id)
+         actualModule INT(1) NOT NULL
+      );
+
+      CREATE TABLE IF NOT EXISTS Skills (
+         id VARCHAR(255) PRIMARY KEY,
+         name VARCHAR(255) UNIQUE NOT NULL
       );
 
       CREATE TABLE IF NOT EXISTS Students (
@@ -34,14 +35,9 @@ const createTables = () => connection
          birthDate DATE NOT NULL,
          email VARCHAR(255) UNIQUE NOT NULL,
          class_id VARCHAR(255),
-         FOREIGN KEY (class_id) REFERENCES Classes (id)
-      );
-
-      CREATE TABLE IF NOT EXISTS Skills (
-         id VARCHAR(255) PRIMARY KEY,
-         name VARCHAR(255) NOT NULL,
-         professor_id VARCHAR(255),
-         FOREIGN KEY (professor_id) REFERENCES Professors (id)
+         skill_id VARCHAR(255) NOT NULL,
+         FOREIGN KEY (class_id) REFERENCES Classes (id),
+         FOREIGN KEY (skill_id) REFERENCES Skills (id)
       );
       
    `)
