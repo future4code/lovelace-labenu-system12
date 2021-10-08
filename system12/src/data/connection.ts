@@ -3,8 +3,6 @@ import dotenv from 'dotenv'
 
 dotenv.config()
 
-const mysql = require('mysql');
-
 export const connection = knex({
     client: 'mysql',
     connection: {

@@ -1,0 +1,16 @@
+[
+  {
+     "id" :1,
+     "name":  "Backend",
+     "startingDate": "2021-06-01",
+     "endingDate": "2021-12-01",
+     "actualModule":  "3"
+  },
+  {
+     "id" :2,
+     "name":  "Frontend",
+     "startingDate": "2021-06-01",
+     "endingDate": "2021-12-01",
+     "actualModule":  "7"
+  }
+]
