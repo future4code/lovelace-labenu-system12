@@ -4,13 +4,13 @@
      "name":  "Backend",
      "startingDate": "2021-06-01",
      "endingDate": "2021-12-01",
-     "professor_id":  "video game, futebol"
+     "actualModule":  "3"
   },
   {
      "id" :2,
      "name":  "Frontend",
-     "email": "victor@gmail.com",
-     "birthDate": "1993-10-04",
-     "hobbies":  "surf, futebol"
+     "startingDate": "2021-06-01",
+     "endingDate": "2021-12-01",
+     "actualModule":  "7"
   }
 ]
