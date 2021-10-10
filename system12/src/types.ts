@@ -31,7 +31,7 @@ export type Class = {
    name: string
    startingDate: string
    endingDate: string
-   professorsList: Array<Professor>
-   studentsList: Array<Student>
+   professorsList?: Array<Professor>
+   studentsList?: Array<Student>
    actualModule: number
 }
